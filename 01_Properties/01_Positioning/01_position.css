@@ -1,0 +1,44 @@
+/* position
+可应用于：除display属性定义为 table-column-group | table-column 之外的所有元素 */
+
+/* static：
+- 对象遵循常规流。此时4个定位偏移属性不会被应用。
+- 默认（top，right，bottom，left属性无效）
+
+relative：
+- 对象遵循常规流，并且参照自身在常规流中的位置通过top，right，bottom，left这4个定位偏移属性进行偏移时不会影响常规流中的任何元素。
+- 可以使用top，right，bottom，left做偏移
+
+absolute：
+对象脱离常规流，此时偏移属性参照的是离自身最近的定位祖先元素，如果没有定位的祖先元素，则一直回溯到body元素。盒子的偏移位置不影响常规流中的任何元素，其margin不与其他任何margin折叠。
+
+fixed：
+与absolute一致，但偏移定位是以窗口为参考。当出现滚动条时，对象不会随着滚动。
+
+sticky：
+对象在常态时遵循常规流。它就像是relative和fixed的合体，当在屏幕中时按常规流排版，当卷动到屏幕外时则表现如fixed。该属性的表现是现实中你见到的吸附效果。（CSS3） */
+
+#container {
+  width: 100%;
+  height: 100%;
+}
+
+/* 居中、文字居中 */
+div .center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 40px;
+  margin: -20px 0 0 -75px;
+  padding: 0 10px;
+  background: #eee;
+  line-height: 2.4;
+  text-align: center;
+}
+
+#bg {
+  background-color: bisque;
+  width: 100px;
+  height: 100px;
+}
