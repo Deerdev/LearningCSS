@@ -1,0 +1,59 @@
+/* margin : 为元素设置所有四个方向（上右下左）的外边距
+  - margin属性接受1~4个参数值。如果提供四个参数值，将按上、右、下、左的顺序作用于四边；提供三个，第一个用于上，第二个用于左、右，第三个用于下；提供两个，第一个用于上、下，第二个用于左、右；只提供一个，同时用于四边。
+  - 非替代(non-replaced)行内元素可以使用该属性定义horizontal-margin；若要定义vertical-margin，必须改变元素为块级或行内块级。
+  - 外延边距始终透明，即不可见也无法设置背景等任何样式。
+  - 某些相邻的margin会发生合并，我们称之为margin折叠：
+
+  # 分拆
+  - horizontal-margin = margin-right,margin-left
+  - vertical-margin = margin-top,margin-bottom
+
+  # margin折叠常规认知：
+  - margin折叠只发生在块级元素上；
+  - 浮动元素的margin不与任何margin发生折叠；
+  - 设置了属性overflow且值为非visible的块级元素，将不与它的子元素发生margin折叠；
+  - 绝对定位元素的margin不与任何margin发生折叠；
+  - 根元素的margin不与其它任何margin发生折叠；
+
+  # 分拆纵向独立属性。为元素设置上、下外边距。
+  - 替代(Replaced)行内元素可以应用该属性；非替代(non-Replaced)行内元素要使用该属性必须改变元素为块级或行内块级。
+  - 水平（默认）书写模式下，margin 合并只发生在vertical-margin上。
+  - 对应的脚本特性分别为：marginTop, marginBottom。
+
+  # 分拆横向独立属性。为元素设置上、下外边距。
+  - 所有的行内元素均可以应用该属性。
+  - 默认情况下，horizontal-margin不会发生 margin 折叠，除非将书写模式改变为纵向。
+  - 对应的脚本特性分别为：marginRight, marginLeft。
+  
+*/
+
+h2 {
+  margin: 10px 0;
+}
+div {
+  margin: 20px 0;
+}
+/* 
+<h2>这是一个标题</h2>
+<div>
+	<h2>这是又一个标题</h2>
+</div>
+*/
+/* margin合并：本例中，第1个h2的margin-bottom，div的margin-top，第2个h2的margin-top是相邻的，三者会被合并取其中最大的那个值作为最后的间隙，所以它们之间的margin间隙最后是（20px）。 */
+
+/* 如果给上例中的div加上border的话：border会产生分隔效果，导致margin不合并 */
+h2 {
+  margin: 10px 0;
+}
+div {
+  margin: 20px 0;
+  border: 1px solid #aaa;
+}
+/*
+<h2>这是一个标题</h2>
+<div>
+	<h2>这是又一个标题</h2>
+</div>
+*/
+
+/* 本例中，第一个h2的margin-bottom（10px），div的margin-top（20px）将被合并，但第二个h2的margin-top不与它们合并，因为它被border分隔，不与它们相邻。 */

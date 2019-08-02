@@ -1,0 +1,64 @@
+/* 布局 */
+
+/* display: 设置或检索对象是否及如何显示。
+  - 如果display设置为none，float及position属性定义将不生效；
+  - 如果position既不是static也不是relative或者float不是none或者该元素是根元素，当display: inline-table时，display的计算值为table；当display: inline | inline-block | run-in | table-*系时，display的计算值为block，其它情况为指定值；
+
+
+  # 部分取值：
+  - none：隐藏对象。与visibility属性的hidden值不同，其不为被隐藏的对象保留其物理空间
+  - flex
+  - grid
+  - table
+*/
+
+/* float: 定义了元素向左或者向右浮动放置 
+  - 当一个元素是绝对定位元素或者定义了display为none时，float定义不生效。
+
+  # 取值：
+  - none： 设置元素不浮动
+  - left： 设置元素浮在左边
+  - right：设置元素浮在右边
+*/
+
+/* clear: 定义了一个元素是否可以放置在它之前的浮动元素旁边，或者必须向下移动在新行中放置
+  - 当一个元素定义了clear值不为none时，可以被用来清除其之前的浮动元素(float)对自身的影响（不同的取值，对应不同方向的浮动）。
+  - 可以用来清除之前元素的float属性
+
+  # 取值：
+  - none： 允许两边都可以有浮动对象
+  - both： 不允许有浮动对象
+  - left： 不允许左边有浮动对象
+  - right： 不允许右边有浮动对象
+*/
+
+/* visibility: 定义了元素是否可见。与display属性不同，visibility会为隐藏的元素保留其占据的物理空间
+  - 如果希望某个元素为可见，其父元素也必须是可见的。 
+ 
+  # 取值：
+  - visible： 可见
+  - hidden： 隐藏
+  - collapse： 主要用来隐藏表格的行或列。隐藏的行或列能够被其他内容使用。对于表格外的其他对象，其作用等同于hidden。
+
+ */
+
+/* overflow 元素处理溢出内容的方式, 类似于裁剪超出container部分
+  - overflow的效果等同于overflow-x + overflow-y 的属性结合
+  - overflow-x属性用于指定元素水平方向上的内容溢出时的处理方式，overflow-y属性用于指定元素垂直方向上的内容溢出时的处理方式。
+  - 当overflow-x,overflow-y中任意一个属性值的定义为非 visible时，另一个属性会自动将默认值visible计算为auto。
+
+  # 取值：
+  - visible： 对溢出内容不做处理，内容可能会超出容器。
+  - hidden： 隐藏溢出容器的内容且不出现滚动条。
+  - scroll： 隐藏溢出容器的内容，溢出的内容可以通过滚动呈现。
+  - auto： 当内容没有溢出容器时不出现滚动条，当内容溢出容器时出现滚动条，按需出现滚动条。textarea元素的overflow默认值就是auto。
+  - clip： 与hidden一样，clip也被用来隐藏溢出容器的内容且不出现滚动条。不同的地方在于，clip是一个完全禁止滚动的容器，而hidden仍然可以通过编程机制让内容可以滚动。
+*/
+.demo {
+  overflow-x: hidden;
+}
+/* 等同于： */
+.demo {
+  overflow-x: hidden;
+  overflow-y: auto;
+}

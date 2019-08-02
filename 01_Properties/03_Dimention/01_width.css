@@ -1,0 +1,13 @@
+/* min-width (min-height 相同）
+
+  - 当min-width属性的值小于width时，min-width属性将会被忽略。
+  - 当min-width属性的值大于width时，min-width属性将会被忽略，同时width会忽略自己的值定义而使用min-width的值作为自己的使用值。
+  - 当min-width属性的值大于max-width时，max-width属性将会被忽略。
+*/
+
+/* max-width (max-height相同）
+
+  - 当max-width属性的值小于width时，max-width属性将会被忽略，同时width会忽略自己的值定义而使用max-width的值作为自己的使用值。
+  - 当max-width属性的值大于width时，max-width属性将会被忽略。
+  - 当max-width属性的值小于min-width时，max-width属性将会被忽略。
+*/
