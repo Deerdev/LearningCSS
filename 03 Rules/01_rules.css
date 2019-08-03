@@ -1,0 +1,167 @@
+/* !important : 提升指定样式规则的应用优先权
+
+
+*/
+
+div {
+  color: #f00 !important; /* 不会被后面的样式覆盖 */
+  color: #000;
+}
+
+/* ----------------------------------- */
+/* @import: 指定导入的外部样式表及目标媒体。
+  - 该规则必须在样式表头部最先声明。并且其后的分号是必需的，如果省略了此分号，外部样式表将无法正确导入，并会生成错误信息。
+  - IE使用@import无法引入超过35条的样式表。
+*/
+
+/* 使用url(url)和直接使用url需要注意的地方： */
+@import url("global.css");
+@import url(global.css);
+@import "global.css";
+
+/* 指定媒体查询： */
+@import url(example.css) screen and (min-width: 800px);
+@import url(example.css) screen and (width: 800px), (color);
+@import url(example.css) screen and (min-device-width: 500px) and
+  (max-device-width: 1024px);
+
+/* ----------------------------------- */
+
+/* @font-face: 设置嵌入HTML文档的字
+
+  # 取值：
+  - <identifier>： 字体名称
+  - <url>： 此值指的是你自定义的字体的存放路径，可以是相对路径也可以是绝路径
+  - <string>： 此值指的是你自定义的字体的格式，主要用来帮助浏览器识别，其值主要有以下几种类型：truetype, opentype, embedded-opentype, svg等
+  - <font>： 定义字体相关样式
+*/
+
+@font-face {
+  font-family: "iconfont";
+  src: url("http://at.alicdn.com/t/font_1397098551_95441.eot");
+  src: url("http://at.alicdn.com/t/font_1397098551_95441.eot?#iefix")
+      format("embedded-opentype"),
+    url("http://at.alicdn.com/t/font_1397098552_0142624.woff") format("woff"),
+    url("http://at.alicdn.com/t/font_1397098551_8732882.ttf") format("truetype"),
+    url("http://at.alicdn.com/t/font_1397098552_0586202.svg#iconfont")
+      format("svg");
+}
+body {
+  font-family: "iconfont";
+  font-style: normal;
+  font-size: 32px;
+  line-height: 2;
+  letter-spacing: 0.25em;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ----------------------------------- */
+/* @page : 设置页面容器的版式，方向，边空等。 
+  # 取值：
+  - <label>： 页面标识符
+  - <pseudo-class>： 打印伪类:first, :left, :right
+*/
+@page:first {
+  margin: 300px;
+}
+
+/* ----------------------------------- */
+/* @keyframes : 指定动画名称和动画效果。
+  - @keyframes定义的动画名称用来被animation-name所使用
+*/
+/* 定义动画时，简单的动画可以直接使用关键字from和to，即从一种状态过渡到另一种状态： */
+@keyframes testanimations {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/* 如果复杂的动画，可以混合<percentage> 去设置某个时间段内的任意时间点的样式： */
+@keyframes testanimations {
+  from {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(20px, 20px);
+  }
+  40% {
+    transform: translate(40px, 0);
+  }
+  60% {
+    transform: translate(60px, 20);
+  }
+  80% {
+    transform: translate(80px, 0);
+  }
+  to {
+    transform: translate(100px, 20px);
+  }
+}
+
+@keyframes testanimations {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(20px, 20px);
+  }
+  40% {
+    transform: translate(40px, 0);
+  }
+  60% {
+    transform: translate(60px, 20px);
+  }
+  80% {
+    transform: translate(80px, 0);
+  }
+  100% {
+    transform: translate(100px, 20px);
+  }
+}
+/* ----------------------------------- */
+/* @supports : 检测是否支持某CSS特性
+
+  # 取值：
+  - rule： 指定一条具体的CSS规则，必须使用括号包裹
+  - operator： 使用or | and | not等操作符指定多条规则。
+*/
+/* 定义支持和不支持flex标准写法的浏览器分别使用不同的规则： */
+@supports (display: flex) {
+  body {
+    display: flex;
+  }
+  #aside {
+    width: 210px;
+  }
+  #main {
+    flex: auto;
+  }
+}
+
+@supports not (display: flex) {
+  #aside {
+    float: left;
+    width: 210px;
+  }
+  #main {
+    overflow: hidden;
+    *zoom: 1;
+  }
+}
+/* 你也可以写多重规则来进行过滤： */
+@supports (box-shadow: 2px 2px) or (-moz-box-shadow: 2px 2px) or
+  (-webkit-box-shadow: 2px 2px) {
+  .demo {
+    -moz-box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+/* ----------------------------------- */
+/* ----------------------------------- */
+/* ----------------------------------- */
+/* ----------------------------------- */

@@ -1,0 +1,66 @@
+/* 元素选择器 */
+/*
+*	          通配选择符(Universal Selector)		 所有元素对象。
+E	          类型选择符(Type Selector)		       以文档语言对象类型作为选择符。
+E#myid	    id选择符(ID Selector)		          以唯一标识符id属性等于myid的E对象作为选择符。
+E.myclass	  class选择符(Class Selector)		    以class属性包含myclass的E对象作为选择符。
+*/
+
+/* 关系选择器 */
+/* 
+E F	包含选择符(Descendant combinator)		      选择所有被E元素包含的F元素。
+E>F	子选择符(Child combinator)		            选择所有作为E元素的子元素F。
+E+F	相邻选择符(Adjacent sibling combinator)		选择紧贴在E元素之后F元素。
+E~F	兄弟选择符(General sibling combinator)		选择E元素所有兄弟元素F。
+*/
+
+/* 属性选择器 */
+/* 
+E[att]		      选择具有att属性的E元素。
+E[att="val"]		选择具有att属性且属性值等于val的E元素。
+E[att~="val"]	  选择具有att属性且属性值为一用空格分隔的字词列表，其中一个等于val的E元素。
+E[att^="val"]	  选择具有att属性且属性值为以val开头的字符串的E元素。
+E[att$="val"]	  选择具有att属性且属性值为以val结尾的字符串的E元素。
+E[att*="val"]	  选择具有att属性且属性值为包含val的字符串的E元素。
+E[att|="val"]	  选择具有att属性且属性值为以val开头并用连接符"-"分隔的字符串的E元素，如果属性值仅为val，也将被选择。
+*/
+
+/* 伪类选择符 Pseudo-Classes Selectors */
+/* 
+E:link	                设置超链接a在未被访问前的样式。
+E:visited	              设置超链接a在其链接地址已被访问过时的样式。
+E:hover	              	设置元素在其鼠标悬停时的样式。
+E:active	            	设置元素在被用户激活（在鼠标点击与释放之间发生的事件）时的样式。
+E:focus		              设置元素在成为输入焦点（该元素的onfocus事件发生）时的样式。
+E:lang(fr)	            匹配使用特殊语言的E元素。
+E:not(s)	              匹配不含有s选择符的元素E。
+E:root	                匹配E元素在文档的根元素。
+E:first-child	          匹配父元素的第一个子元素E。
+E:last-child	          匹配父元素的最后一个子元素E。
+E:only-child	          匹配父元素仅有的一个子元素E。
+E:nth-child(n)	        匹配父元素的第n个子元素E。
+E:nth-last-child(n)	    匹配父元素的倒数第n个子元素E。
+E:first-of-type	        匹配父元素下第一个类型为E的子元素。
+E:last-of-type	        匹配父元素下的所有E子元素中的倒数第一个。
+E:only-of-type	        匹配父元素的所有子元素中唯一的那个子元素E。
+E:nth-of-type(n)	      匹配父元素的第n个子元素E。
+E:nth-last-of-type(n)	  匹配父元素的倒数第n个子元素E。
+E:empty	                匹配没有任何子元素（包括text节点）的元素E。
+E:checked	              匹配用户界面上处于选中状态的元素E。(用于input type为radio与checkbox时)
+E:enabled	              匹配用户界面上处于可用状态的元素E。
+E:disabled	            匹配用户界面上处于禁用状态的元素E。
+E:target	              匹配相关URL指向的E元素。
+@page:first	            设置页面容器第一页使用的样式。仅用于@page规则
+@page:left	            设置页面容器位于装订线左边的所有页面使用的样式。仅用于@page规则
+@page:right	            设置页面容器位于装订线右边的所有页面使用的样式。仅用于@page规则
+*/
+
+/* 伪对象选择符 Pseudo-Element Selectors */
+/* 
+E:first-letter/E::first-letter		  设置对象内的第一个字符的样式。
+E:first-line/E::first-line		      设置对象内的第一行的样式。
+E:before/E::before		              设置在对象前（依据对象树的逻辑结构）发生的内容。用来和content属性一起使用
+E:after/E::after	                	设置在对象后（依据对象树的逻辑结构）发生的内容。用来和content属性一起使用
+E::placeholder	                    设置对象文字占位符的样式。
+E::selection		                    设置对象被选择时的颜色。
+*/
