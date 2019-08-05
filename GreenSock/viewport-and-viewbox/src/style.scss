@@ -1,0 +1,17 @@
+body {
+  background: #eee5e9;
+  font-family: Inconsolata, monospace;
+  display: flex;
+  justify-content: space-around;
+}
+svg {
+  background: white;
+  width: 500px;
+  height: 500px;
+  border: 5px solid #777da7;
+}
+
+p {
+  font-size: 25px;
+  max-width: 500px;
+}
