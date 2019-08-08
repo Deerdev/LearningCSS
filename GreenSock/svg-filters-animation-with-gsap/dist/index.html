@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>SVG filters animation with GSAP</title>
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <div class="dribble">
+  <p>Illustration by <a target="_blank" href="https://dribbble.com/marisachentakul">
+  Marisa
+</a></p>
+
+</div>
+	<svg viewBox="0 0 1152 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<defs>
+				<filter id="turb2">
+					<feTurbulence id="turb" type="fractalNoise" baseFrequency="0.003, 0.0" numOctaves="1" result="TURB" seed='8' />
+					<feDisplacementMap xChannelSelector="R" yChannelSelector="R" in="SourceGraphic" in2="TURB" result="DISP" scale="50" />
+					<feGaussianBlur id="blur" in="DISP" stdDeviation="1 2" result="BLUR" />
+					<feColorMatrix id="matrix" in="BLUR" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -10" result="GOO" />
+				</filter>
+			</defs>
+ <g id="Task">
+    <path fill="#fff" d="M0 0h1152v700H0z"/>
+    <path id="Vector 5.4" d="M896 543c15.5-9.5 21.5-32 26.5-40-7.2 10.4-17.667 16-22 17.5 1.6 6.8-2.333 17.833-4.5 22.5z" fill="#A4C3FE"/>
+    <g id="postit3">
+      <path filter="url(#turb2)" id="Vector 6.1" d="M631 323.5l166 7c4.8-24.8-9.333-109.333-17-148.5l-149-5.5v147z" fill="#7D8CA6"/>
+      <path class="post" id="Vector 3.1" d="M618 320.5v-156l166 5c6 61.5-1 130-25.5 146-19.6 12.8-101.833 8.667-140.5 5z" fill="#F1F1F1"/>
+      <path id="color 2" class="pin" d="M702 167a9 9 0 0 1-9-9 9 9 0 0 1 9-9 9 9 0 0 1 9 9 9.003 9.003 0 0 1-6 8.488l-1 5.012-2-4.5z" fill="#EE7E79"/>
+      <ellipse id="Ellipse 2.10" class="shadow" cx="717.033" cy="172.562" rx="9" ry="4.5" transform="rotate(22.157 717.033 172.562)" fill="#C4B7B6"/>
+    </g>
+    <g id="post it 4">
+      <path filter="url(#turb2)" id="Vector 7.2" d="M941 311.5c-18.8 12-100.5 1-139-6 4-19.2 1.667-97 0-133.5h149.5c3.5 27 13 124.5-10.5 139.5z" fill="#7D8CA6"/>
+      <path class="post" id="color 1" d="M794 315V162.5h160c2.167 32.333 5.2 98.5 0 104.5-6.5 7.5-33.5 40.5-50 48H794z" fill="#DAE4FA"/>
+      <path class="post" id="Vector 4.3" d="M904 315c16.5-7.5 43.5-40.5 50-48-15.6 2.4-29.5 1-34.5 0 0 18.8-10.333 39.833-15.5 48z" fill="#A4C3FE"/>
+      <path id="color 2_2" class="pin" d="M879.5 167a9 9 0 0 1-9-9 9 9 0 0 1 9-9 9 9 0 0 1 9 9 9.003 9.003 0 0 1-6 8.488l-1 5.012-2-4.5z" fill="#EE7E79"/>
+      <ellipse id="Ellipse 2.11" class="shadow" cx="894.533" cy="172.562" rx="9" ry="4.5" transform="rotate(22.157 894.533 172.562)" fill="#C4B7B6"/>
+    </g>
+    <g id="post it 6">
+      <path filter="url(#turb2)" id="Vector 8.2" d="M637 488.5c-17.2 8.8-108.5 3.667-152 0L477 355l134.5-14.5c16.8 13.6 24 104.333 25.5 148z" fill="#7D8CA6"/>
+      <path class="post" id="Vector 5.2" d="M475.5 497.5l-17-150 156-18.5c15.2 66.8 15 127.167 13 149-16 10.8-108 17.5-152 19.5z" fill="#EDF3FF"/>
+      <path id="color 2_3" class="pin" d="M534 345.5a9 9 0 0 1-9-9 9 9 0 0 1 9-9 9 9 0 0 1 9 9 9.003 9.003 0 0 1-6 8.488L536 350l-2-4.5z" fill="#EE7E79"/>
+      <ellipse id="Ellipse 2.14" class="shadow" cx="549.033" cy="351.062" rx="9" ry="4.5" transform="rotate(22.157 549.033 351.062)" fill="#C4B7B6"/>
+    </g>
+    <g id="post it 1">
+      <path filter="url(#turb2)" id="Vector 6.3" d="M452.5 323c-30 10.8-110.833 1.167-147.5-5 9.6-15.6 4-107.5 0-151.5L449 177l3.5 146z" fill="#7D8CA6"/>
+      <path class="post" id="color 1_2" d="M285.5 301c11.6-18.8 13.833-103.5 13.5-143.5l154.5 11c-1.667 39-5.7 120.8-8.5 136-1.296 7.034-2.499 7.843-3.5 5.807-27.2 4.646-115.333-4.269-156-9.307z" fill="#DAE4FA"/>
+      <path id="color 2_4" class="pin" d="M374 173.5a9 9 0 0 1-9-9 9 9 0 0 1 9-9 9 9 0 0 1 9 9 9.003 9.003 0 0 1-6 8.488L376 178l-2-4.5z" fill="#EE7E79"/>
+      <ellipse id="Ellipse 2.8" class="shadow" cx="389.033" cy="179.062" rx="9" ry="4.5" transform="rotate(22.157 389.033 179.062)" fill="#C4B7B6"/>
+      <path id="Rectangle" stroke="#8A6564" d="M316.5 191h114v9h-114z"/>
+      <path id="Rectangle_2" stroke="#8A6564" d="M316.5 214h114v9h-114z"/>
+      <path id="Rectangle_3" fill="url(#paint0_linear)" d="M316 239.5h23v28h-23z"/>
+      <path id="Rectangle_4" fill="url(#paint1_linear)" d="M358 239.5h23v28h-23z"/>
+      <path id="Rectangle_5" fill="url(#paint2_linear)" d="M400 239.5h23v28h-23z"/>
+      <path class="post" id="Vector" d="M439 297l-153.5 4c40.667 5.038 128.8 13.953 156 9.307-1.162-2.364-2.052-8.562-2.5-13.307z" fill="#A4C3FE"/>
+    </g>
+    <g id="post it 8">
+      <path filter="url(#turb2)" id="Vector 9.1" d="M920.5 549c-8.4-7.6-92.5-10.833-133.5-11.5l-7.5-145 147 7c11.2 35.2.667 114.333-6 149.5z" fill="#7D8CA6"/>
+      <path class="post" id="Vector 5.3" d="M769.5 543l3-159 157 3c-.667 36-3 109.6-7 116-5 8-11 30.5-26.5 40H769.5z" fill="#EDF3FF"/>
+      <path id="color 2_5" class="pin" d="M854 394.5a9 9 0 0 1-9-9 9 9 0 0 1 9-9 9 9 0 0 1 9 9 9.003 9.003 0 0 1-6 8.488L856 399l-2-4.5z" fill="#EE7E79"/>
+      <ellipse id="Ellipse 2.12" cx="869.033" cy="400.062" rx="9" ry="4.5" transform="rotate(22.157 869.033 400.062)" fill="#C4B7B6"/>
+      <path id="Rectangle_6" stroke="#8A6564" d="M796.5 414h114v9h-114z"/>
+      <path id="Rectangle_7" stroke="#8A6564" d="M796.5 437h114v9h-114z"/>
+      <path id="Rectangle_8" fill="url(#paint3_linear)" d="M796 462.5h23v28h-23z"/>
+      <path id="Rectangle_9" fill="url(#paint4_linear)" d="M838 462.5h23v28h-23z"/>
+      <path id="Rectangle_10" fill="url(#paint5_linear)" d="M880 462.5h23v28h-23z"/>
+    </g>
+    <g id="post it 7">
+      <path filter="url(#turb2)" id="Vector 8.1" d="M777 527c-66.4-23.6-133-7.833-158 3 6.4-8 2.667-106.667 0-155l140.5 6c8.8 18.8 15.333 105.167 17.5 146z" fill="#7D8CA6"/>
+      <path class="post" id="color 1_3" d="M768.5 511.5c-14 6.4-110.833 5.333-157.5 4 6.8-11.2 2.833-107 0-153.5h155c2 12 2.5 104.667 2.5 149.5z" fill="#DAE4FA"/>
+      <path id="color 2_6" class="pin" d="M699 368.5a9 9 0 0 1-9-9 9 9 0 0 1 9-9 9 9 0 0 1 9 9 9.003 9.003 0 0 1-6 8.488L701 373l-2-4.5z" fill="#EE7E79"/>
+      <ellipse id="Ellipse 2.13" cx="714.033" cy="374.062" rx="9" ry="4.5" transform="rotate(22.157 714.033 374.062)" fill="#C4B7B6"/>
+      <path id="Rectangle_11" fill="url(#paint6_linear)" d="M645 392.5h23v28h-23z"/>
+      <path id="Rectangle_12" stroke="#8A6564" d="M685.5 403h66v7h-66z"/>
+      <path id="Rectangle_13" fill="url(#paint7_linear)" d="M708 445.5h45v53h-45z"/>
+    </g>
+    <g id="postit 2">
+      <path filter="url(#turb2)" id="Vector 6.2" d="M624.5 287.5c-34.4 3.2-111.667 20.333-146 28.5 7.6-20.4-8.167-104.833-17-144.5l132-25c4.4 12.4 22.5 99.167 31 141z" fill="#7D8CA6"/>
+      <path class="post" id="Vector 2.1" d="M462 301.5l-27-145L592.5 131c4.4 10 13.5 97.167 17.5 139.5-6.8-5.2-101.5 18.5-148 31z" fill="#EDF3FF"/>
+      <path id="color 2_7" class="pin" d="M518.5 149.5a9 9 0 0 1-9-9 9 9 0 0 1 9-9 9 9 0 0 1 9 9 9.003 9.003 0 0 1-6 8.488l-1 5.012-2-4.5z" fill="#EE7E79"/>
+      <ellipse id="Ellipse 2.9" cx="533.533" cy="155.062" rx="9" ry="4.5" transform="rotate(22.157 533.533 155.062)" fill="#C4B7B6"/>
+      <path id="Rectangle_14" transform="rotate(-11.222 473.13 183.013)" stroke="#8A6564" d="M473.13 183.013h110.137v4.05H473.13z"/>
+      <path id="Rectangle_15" transform="rotate(-11.222 475.088 196.521)" stroke="#8A6564" d="M475.088 196.521h110.137v4.05H475.088z"/>
+      <path id="Rectangle_16" transform="rotate(-11.222 479.088 211.521)" stroke="#8A6564" d="M479.088 211.521h110.137v4.05H479.088z"/>
+    </g>
+    <g id="post it 5">
+      <path filter="url(#turb2)" id="Vector 7.1" d="M462.5 532L307 500.5 330.5 358l139 21.5-7 152.5z" fill="#7D8CA6"/>
+      <path class="post" id="Vector 4.2" d="M298.5 496L324 350l153.5 23.5-25.5 146L298.5 496z" fill="#F1F1F1"/>
+      <path id="color 2_8" class="pin" d="M400 371.5a9 9 0 0 1-9-9 9 9 0 0 1 9-9 9 9 0 0 1 9 9 9.003 9.003 0 0 1-6 8.488L402 376l-2-4.5z" fill="#EE7E79"/>
+      <ellipse id="Ellipse 2.15" cx="415.033" cy="377.062" rx="9" ry="4.5" transform="rotate(22.157 415.033 377.062)" fill="#C4B7B6"/>
+      <path id="Rectangle_17" transform="rotate(1.74 336.76 406.015)" stroke="#8A6564" d="M336.76 406.015h110.137v4.05H336.76z"/>
+      <path id="Rectangle_18" transform="rotate(1.74 335.638 419.617)" stroke="#8A6564" d="M335.638 419.617h110.137v4.05H335.638z"/>
+      <path id="Rectangle_19" transform="rotate(1.74 336.172 435.133)" stroke="#8A6564" d="M336.172 435.133h110.137v4.05H336.172z"/>
+    </g>
+    <g id="man">
+      <path id="Vector 8" d="M233.385 334.501c0 2.487 3.627 1.036 5.44 0 1.814-2.073 5.596-7.15 6.218-10.881.777-4.663-3.109-3.886-1.555-6.217 1.555-2.332 6.289-5.854 5.512-14.403-.777-8.549-3.957-6.158-6.289-6.158s0 3.886-5.44 3.886c-5.441 0-3.886 3.886-3.886 7.772s-3.776-3.109-6.885 0-7.615 5.261-3.5 8.903c3.5 3.097 3 4.097 6.499 9.326 2.629 3.929 3.886 4.663 3.886 7.772z" fill="#4B5361"/>
+      <g id="Vector 7" fill="#8A6564">
+        <path d="M318.875 298.75c-3.73 8.083-26.424 24.093-37.305 31.088-4.352 8.704 1.814 11.917 5.441 12.435 28.756-13.213 34.196-38.86 38.082-39.637 3.886-.777 6.994-6.995 6.994-10.88 0-3.886 3.109-6.218 4.664-12.435 1.554-6.218-4.664-6.218-4.664-3.886 0 2.331-8.549 13.212-13.212 23.315zM206.183 388.904c-1.243-3.109 4.145-11.14 6.995-14.767 7.461 0 13.989 9.845 16.321 14.767-.259 3.109-1.555 9.326-4.663 9.326-3.886 0-17.098-5.44-18.653-9.326zM253.592 328.283c0 3.109-3.627 8.549-5.441 10.881-.777 1.041-10.88 0-10.88-2.332 0-2.331 7.772-12.435 5.44-14.766-2.332-2.332-3.886-4.663-3.109-6.995.622-1.865 2.332-1.813 3.109-1.554 0-6.218 1.554-7.254 2.332-6.995 5.44 1.554 8.549 17.875 8.549 21.761z"/>
+      </g>
+      <path id="Vector 6" d="M270.69 580.755c-3.109-3.731-.777-10.881.777-13.989 5.44 6.217 5.44 0 10.881 0 5.44 0 17.098 4.663 17.098 6.994 0 2.332-24.87 11.658-28.756 6.995z" fill="#4B5361"/>
+      <path id="Vector 5" d="M227.167 566.766c-3.73-3.109-1.554-8.549 0-10.881 4.663 6.218 4.663 2.332 12.435-1.554 6.218-3.109 8.808-1.296 9.326 0-.777 5.44-17.098 16.321-21.761 12.435z" fill="#4B5361"/>
+      <path id="Vector 4" d="M216.287 433.98c-3.109-8.082.259-19.947 2.331-24.87.918-2.487 27.843 2.073 41.191 4.664 10.104 6.217 37.305 73.055 40.414 76.164 2.487 2.487-8.29 52.33-13.99 76.941-5.595 1.866-13.73-1.813-17.098-3.886-1.243-6.217 5.182-47.149 8.549-66.838-6.839-6.839-19.429-26.165-24.87-34.973 6.218 10.103 5.441 29.533 5.441 38.859 0 7.461-10.881 39.896-16.321 55.18-6.218 3.109-13.471.26-16.321-1.554 0-5.44 10.881-48.963 11.658-61.398.777-12.435-17.098-48.185-20.984-58.289z" fill="url(#paint8_linear)"/>
+      <path id="color 2_9" d="M214.732 364.034c0-13.057 15.544-23.575 23.316-27.202 7.976-4.663 13.989 6.218 22.538 0 6.84-4.974 18.394-9.844 23.316-11.658l4.663 22.539-12.435 12.435c0 11.657-6.995 42.745-15.544 52.071-6.839 7.461-30.828 1.036-41.968-3.109 4.462-15.615 3.765-22.871 1.825-27.978l-12.705-6.218 6.994-10.88z" fill="url(#paint9_linear)"/>
+    </g>
+    <g id="plant">
+      <g id="Vector 5_2" fill="#FFCB56">
+        <path class="rotate" d="M793.195 585.017c-8.526-4.263-26.492-15.712-30.146-27.405 7.917 4.872 25.03 17.174 30.146 27.405zM797.763 582.277c-14.617-15.53-44.032-48.052-44.763-53.898 9.135 1.522 30.877 14.434 44.763 53.898-3.35-15.53-12.79-50.061-23.752-63.947 6.395 2.436 20.098 9.683 23.752 19.184 3.654 9.501 1.522 33.8 0 44.763z"/>
+      </g>
+      <path id="Vector 3" d="M816.033 585.931c-.609 8.831-3.654 27.041-10.962 29.233-9.135 2.741-14.616-1.827-14.616-5.481 0-2.923-1.828-17.052-2.741-23.752-.914-.913-2.375-3.288-.914-5.481 8.831.609 27.041 1.462 29.233 0 2.741-1.827 1.827 4.954 0 5.481z" fill="#8A6564"/>
+      <g id="Vector 4_2" fill="#FADB96">
+        <path class="rotate" d="M802.33 584.104c-9.439-16.139-28.319-50.609-28.319-59.379 11.267 7.004 32.704 28.685 28.319 59.379zM845.266 565.833c-29.233.731-36.541 12.485-36.541 18.271-.603-3.621-.665-6.97-.283-10.049-5.996-14.616-14.881-46.772-2.457-58.465a35.03 35.03 0 0 1 2.457-2.11c-2.646-11.782-2.275-37.172 20.381-44.48-5.786 6.09-16.809 20.098-14.617 27.406 2.741-5.481 10.232-15.53 18.271-11.876-4.872 2.446-14.617 8.976-14.617 15.53 3.959-3.959 14.982-10.414 27.406-4.568-9.44 1.199-28.136 5.428-27.406 12.76 12.991-4.762 26.016-.924 27.406 1.857-10.846-.305-33.396 1.827-36.824 12.789 10.752-5.177 35.728-12.789 49.613-1.827-17.357.304-52.07 4.567-52.07 19.184 17.052-7.004 57.369-18.088 82.217-6.395-26.681-1.218-79.986 5.116-79.76 40.195 2.508-20.224 24.139-28.75 36.824-25.578 11.693 2.923 33.496 3.654 42.936 3.654-2.132 4.263-13.703 12.972-42.936 13.702z"/>
+      </g>
+    </g>
+  </g>
+  <defs>
+    <linearGradient id="paint0_linear" x1="327.5" y1="239.5" x2="327.5" y2="267.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFCB56"/>
+      <stop offset="1" stop-color="#FADB96" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear" x1="369.5" y1="239.5" x2="369.5" y2="267.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFCB56"/>
+      <stop offset="1" stop-color="#FADB96" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="paint2_linear" x1="411.5" y1="239.5" x2="411.5" y2="267.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFCB56"/>
+      <stop offset="1" stop-color="#FADB96" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="paint3_linear" x1="807.5" y1="462.5" x2="807.5" y2="490.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFCB56"/>
+      <stop offset="1" stop-color="#FADB96" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="paint4_linear" x1="849.5" y1="462.5" x2="849.5" y2="490.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFCB56"/>
+      <stop offset="1" stop-color="#FADB96" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="paint5_linear" x1="891.5" y1="462.5" x2="891.5" y2="490.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFCB56"/>
+      <stop offset="1" stop-color="#FADB96" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="paint6_linear" x1="656.5" y1="392.5" x2="656.5" y2="420.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFCB56"/>
+      <stop offset="1" stop-color="#FADB96" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="paint7_linear" x1="730.5" y1="445.5" x2="730.5" y2="498.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFCB56"/>
+      <stop offset="1" stop-color="#FADB96" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="paint8_linear" x1="257.808" y1="408.392" x2="258" y2="591.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#CDD6E6"/>
+      <stop offset="1" stop-color="#CDD6E6" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="paint9_linear" x1="248.151" y1="325.174" x2="248" y2="453" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EE7E79"/>
+      <stop offset="1" stop-color="#EE7E79"/>
+    </linearGradient>
+  </defs>
+</svg>
+	
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/GSDevTools.min.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>
